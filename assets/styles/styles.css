@@ -23,3 +23,14 @@
     max-height: 90%;
     border: 3px solid white;
 }
+.brand-custom {
+    display: inline-block;
+    background-color: #057da1; 
+    color: #fff; 
+    border-radius: 50%; 
+    text-align: center;
+    width: 50px; 
+    height: 50px; 
+    line-height: 40px; 
+    font-weight: bold; 
+}
