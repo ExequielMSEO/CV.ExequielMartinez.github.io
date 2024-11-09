@@ -6,6 +6,7 @@
     <title>Exequiel Martinez - CV</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/styles.css">
     <style>
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/img/avatar-exe.jpg');
@@ -199,7 +200,7 @@
             <div class="row">
                 <div class="col-md-3 mb-4">
                     <div class="card position-relative" style="height: 250px;">
-                        <img src="/assets/img/Desafio Landing tiempo online.PNG" class="card-img-top" alt="Trabajo Tienda Online" style="height: 120px;">
+                        <img src="/assets/img/Desafio Landing tiempo online.PNG" class="card-img-top" alt="Trabajo Tienda Online" style="height: 120px;" onclick="openLightbox(this)">
                         <div class="card-body">
                             <h5 class="card-title centrado-abajo text-center">Construyendo una landing page</h5>
                         </div>
@@ -207,7 +208,7 @@
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card position-relative" style="height: 250px;">
-                        <img src="/assets/img/desafio landing iguana.PNG" class="card-img-top" alt="Trabajo Landing Iguana" style="height: 120px;">
+                        <img src="/assets/img/desafio landing iguana.PNG" class="card-img-top" alt="Trabajo Landing Iguana" style="height: 120px;" onclick="openLightbox(this)">
                         <div class="card-body">
                             <h5 class="card-title centrado-abajo text-center">Iguana page</h5>
                         </div>
@@ -215,7 +216,7 @@
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card position-relative" style="height: 250px;">
-                        <img src="/assets/img/desafio cuppon bootstrap.PNG" class="card-img-top" alt="Trabajo Cuppon con Bootstrap" style="height: 120px;">
+                        <img src="/assets/img/desafio cuppon bootstrap.PNG" class="card-img-top" alt="Trabajo Cuppon con Bootstrap" style="height: 120px;" onclick="openLightbox(this)">
                         <div class="card-body">
                             <h5 class="card-title centrado-abajo text-center" >Landing Cuppon</h5>
                         </div>
@@ -223,15 +224,19 @@
                 </div>
                 <div class="col-md-3 mb-4">
                     <div class="card position-relative" style="height: 250px;">
-                        <img src="/assets/img/desafio git y github.PNG" class="card-img-top" alt="Trabajo Git y Github"  style="height: 120px;">
+                        <img src="/assets/img/desafio git y github.PNG" class="card-img-top" alt="Trabajo Git y Github"  style="height: 120px;" onclick="openLightbox(this)">
                         <div class="card-body">
                             <h5 class="card-title centrado-abajo text-center">Terminal, Git y Github</h5>
                         </div>
                     </div>
                 </div>
+                
             </div>
+            <h5 class="text-center mb-5 text-warning">Click en la imagen para ver en tamaño completo</h5>
         </div>
     </section>
+    
+    <!-- Lightbox -->
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
@@ -257,7 +262,25 @@
             </div>
         </div>
     </footer>
+    <script>
+        function openLightbox(img) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = img.src;
+            lightbox.style.display = 'flex';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+    </div>
+    
+    <script src="/assets/lightbox.js"></script>
 </body>
+
 </html>
